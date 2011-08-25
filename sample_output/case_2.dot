@@ -1,0 +1,16 @@
+digraph case_2 {
+size="8,11";
+node [shape=point];
+edge [arrowhead=none];
+1[shape=ellipse,label=s1];
+2->1[label=c5];
+3[shape=ellipse,label=s4];
+2->3;
+4->2[label=c4];
+5[shape=ellipse,label=s3];
+4->5;
+6->4[label=c2];
+7[shape=ellipse,label=s2];
+8->7[label=c1];
+6->8[shape=ellipse,label=c3];
+}

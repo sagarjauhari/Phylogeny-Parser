@@ -1,0 +1,42 @@
+William Blair wdblair@bu.edu
+
+The outline of the Algorithm used is found inside of Algorithm.java within the buildPhylogeneticTree() method.
+
+RUN TIME ANALYSIS:
+s = number of species
+t = number of traits
+
+Building the Binary Matrix:
+Takes about O(st) to build the matrix. 2 nested for loops.
+Sorting the Binary Matrix probably takes O(tlogt), standard sort algoritm.
+Finding if the Phylogeny is perfect takes O(t choose 2) time. 
+
+Building the Keys Matrix:
+2 nested for loops, again about O(st) time.
+
+Building the Tree:
+Insertion is bounded by the height of the tree, aproximate at O(s *logt) time since it inserts potentially t traits s times.
+
+Pruning the Tree:
+An inorder tree traversal, visits every node once so it is bounded by O(t nodes + s leafs)
+
+Saving the Tree:
+Another inorder tree traversal so it should be around O(t+s)
+
+Overall Run Time:
+The greatest runtime specified above is s*t so the total algorithm should be O(s*t)
+
+
+To compile the files, run the following command:
+
+javac *.java
+
+Run the program with the following command:
+
+java Algorithm
+
+The program's input is located inside of species.input.
+
+The program will write DOT files for each Phylogeny that is a perfect Phylogeny. If a case is not a perfect phylogeny, it will say so during the program's execution.
+
+Sample output is located inside the "sample_output" directory. There are postscript files generated from Graphviz's dot utility that show the resulting Phylogenetic tree from each .dot file that the program generated. The program will generate these .dot files inside the current directory.
