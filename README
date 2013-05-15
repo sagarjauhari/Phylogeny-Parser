@@ -29,14 +29,15 @@ The greatest runtime specified above is s*t so the total algorithm should be O(s
 
 To compile the files, run the following command:
 
-javac *.java
+javac *.java -d bin
 
 Run the program with the following command:
 
+cd bin
 java Algorithm
 
-The program's input is located inside of species.input.
+The program's input is located inside of input/species.input.
 
 The program will write DOT files for each Phylogeny that is a perfect Phylogeny. If a case is not a perfect phylogeny, it will say so during the program's execution.
 
-Sample output is located inside the "sample_output" directory. There are postscript files generated from Graphviz's dot utility that show the resulting Phylogenetic tree from each .dot file that the program generated. The program will generate these .dot files inside the current directory.
+Sample output is located inside the "sample_output" directory. There are postscript files generated from Graphviz's (http://graphviz.org/) dot utility that show the resulting Phylogenetic tree from each .dot file that the program generated. The program will generate these .dot files inside the output directory.

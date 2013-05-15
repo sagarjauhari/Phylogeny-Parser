@@ -3,6 +3,7 @@
  * William Blair wdblair@bu.edu
  * CS431 Homework 5
  */
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -159,7 +160,7 @@ public class Phylogeny
 	{
 		FileWriter outFile = null;
 		try {
-			outFile = new FileWriter(name+".dot");
+			outFile = new FileWriter(".." + File.separator + "output" + File.separator + name+".dot");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,3 +1,5 @@
+import java.io.File;
+
 /**
  * Main File for Phylogenetic Tree Algorithm
  * William Blair wdblair@bu.edu
@@ -24,7 +26,7 @@ public class Algorithm
     public static void main(String[] args)
     {
 		//Get the file
-    	Parser p = new Parser("species.input");
+    	Parser p = new Parser(".."+File.separator + "input" + File.separator +"species.input");
     	//Perform the algorithm on each phylogeny
     	int i = 0;
     	while(p.hasPhylogeny())
